@@ -1,8 +1,11 @@
-const mainLayout = () => {
+import {JobsList} from "../pages";
+
+const MainLayout = () => {
     return (
         <div>
+            <JobsList/>
         </div>
     );
 };
 
-export {mainLayout}
+export {MainLayout}

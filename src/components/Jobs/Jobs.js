@@ -1,6 +1,9 @@
 import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {jobActions} from "../redux/slices/jobSlice";
+
+import {jobActions} from "../../redux/slices/jobSlice";
+import {Job} from "../Job/Job";
+import css from './Jobs.module.css'
 
 const Jobs = () => {
 
@@ -14,8 +17,8 @@ const Jobs = () => {
 
     return (
         <div>
-            <div>
-                {allJobs.map((job)=> <p>{job.name}</p> )}
+            <div className={css.cards}>
+                {allJobs?.map((job)=> <Job job={job} key={job.id}/> )}
             </div>
         </div>
     );
